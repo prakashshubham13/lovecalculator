@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <title>LOVE CALCULATOR</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="8.png">
+    <style>
+        body{
+            width: 100%;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("3.png") center no-repeat;
+	background-size: cover;
+	position: relative;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  font-family: 'Indie Flower', cursive;
+        }
+        .checkk{
+            color: whitesmoke;
+            align-items: center;
+            display:block;
+            margin-top: 10%;
+            background: url(6.png) center no-repeat;
+width: 70%;
+margin: auto;
+margin-top: 2%;
+
+
+box-shadow: 0px 4px 4px 4px rgb(0, 0, 0);
+text-align: center;
+font-weight: 900;
+font-family: 'Teko', sans-serif;
+font-size: 30px;
+        }
+        input{
+            
+      display: block;
+      width: 30%;
+      margin: auto;
+      padding: 2%;
+      margin-bottom: 2%;
+      background-color: rgb(255, 255, 255);
+      font-weight: 900;
+      border: 2px solid rgb(0, 0, 0);
+      box-shadow: 0px 4px 4px 4px rgb(0, 0, 0);
+      text-align: center;
+        }
+        input:focus{
+            border: none;
+        }
+        h2{
+           
+            font-size: 40px;
+            text-align: center;
+            color: crimson;
+            font-family: 'Roboto', sans-serif;
+           
+        }
+        button{
+            display: block;
+      width: 25%;
+      padding: 2%;
+      margin: auto;
+      background-color: rgb(132, 255, 101);
+      opacity: 0.7;
+      border: none;
+      font-weight: 900;
+      box-shadow: 4px -7px  rgb(0, 0, 0);
+      color: darkblue;
+        }
+      
+        
+    </style>
+</head>
+<body>
+    
+    <div id="particles-js">
+<div class="checkk">
+    <i class="fas fa-heart" style="color: crimson;"></i>
+    <h2>CALCULATE YOUR LOVE BOND</h2>
+
+    YOUR NAME:
+    
+    <input type="text" id="name" placeholder="ENTER">
+    <br>
+  
+    YOUR PARTNER'S NAME:
+    <input type="text" id="lname" placeholder="ENTER">
+    <br>
+    <button onclick="check()">CHECK</button>
+    <br>
+    
+    <input type="text" id="result" placeholder="RESULT" disabled>
+    <i class="fas fa-heart" style="color: crimson;"></i>
+</div>
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/8893b709f5.js" crossorigin="anonymous"></script>
+    <script>
+        function check()
+        {
+            var a = document.getElementById('name').value;
+            var b = document.getElementById('lname').value;
+            if (a == "") {
+                alert('PLEASE ENTER CORRECT DETAILS');
+            }
+            else if(a.length < 1){
+                alert('PLEASE ENTER CORRECT DETAILS');
+            }
+            else if(!isNaN(a))
+            {
+                alert('PLEASE ENTER CORRECT DETAILS');
+
+            }
+            else if (b == "") {
+                alert('PLEASE ENTER CORRECT DETAILS');
+            }
+            else if(b.length < 1){
+                alert('PLEASE ENTER CORRECT DETAILS');
+            }
+            else if(!isNaN(b))
+            {
+                alert('PLEASE ENTER CORRECT DETAILS');
+
+            }
+            
+            else{
+var lovedata = ((a.length+b.length)%10)*10;
+lovedata = Math.floor(lovedata);
+document.getElementById('result').value = lovedata + "%";
+        }}
+
+    </script>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
